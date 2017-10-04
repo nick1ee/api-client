@@ -22,6 +22,11 @@ internal final class PostAPIClientTests: XCTestCase {
     
     internal final override func setUp() {
         super.setUp()
+
+        self.client = APIClient(
+            router: StubRouter(),
+            httpClient: StubHTTPClient()
+        )
         
     }
     

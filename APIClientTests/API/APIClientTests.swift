@@ -20,19 +20,21 @@ internal final class APIClientTests: XCTestCase {
         
         let router = StubRouter()
         
-        let client = APIClient(
+        let httpClient = StubHTTPClient()
+        
+        let apiClient = APIClient(
             router: router,
-            session: .shared
+            httpClient: httpClient
         )
         
         XCTAssertEqual(
-            client.router,
+            apiClient.router,
             router
         )
         
         XCTAssertEqual(
-            client.session,
-            .shared
+            apiClient.httpClient,
+            httpClient
         )
         
     }
