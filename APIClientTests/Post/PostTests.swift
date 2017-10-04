@@ -35,4 +35,32 @@ internal final class PostTests: XCTestCase {
         
     }
     
+    // MARK: JSON
+    
+    internal final func testInitWithJSON() {
+        
+        do {
+            
+            let json: [String: Any] = [
+                "title": "Hello",
+                "body": "World"
+            ]
+            
+            let post = try Post(json: json)
+            
+            XCTAssertEqual(
+                post.title,
+                "Hello"
+            )
+            
+            XCTAssertEqual(
+                post.body,
+                "World"
+            )
+            
+        }
+        catch { XCTFail("\(error)") }
+        
+    }
+    
 }
