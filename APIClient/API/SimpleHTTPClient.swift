@@ -42,6 +42,20 @@ public struct SimpleHTTPClient {
     
 }
 
+// MARK: - Equatable
+
+extension SimpleHTTPClient: Equatable {
+    
+    public static func == (
+        lhs: SimpleHTTPClient,
+        rhs: SimpleHTTPClient) -> Bool {
+        
+        return lhs.session == rhs.session
+        
+    }
+    
+}
+
 // MARK: - HTTPClient
 
 extension SimpleHTTPClient: HTTPClient {

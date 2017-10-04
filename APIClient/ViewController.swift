@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public final class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    public final let client: PostAPIClient = APIClient(
+        router: APIRouter.readPost(id: "1"),
+        httpClient: SimpleHTTPClient()
+    )
+    
+    public final override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        client.readPost { result in
+            
+            print(result)
+            
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

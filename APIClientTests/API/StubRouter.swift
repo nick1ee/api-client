@@ -30,7 +30,9 @@ internal struct StubRouter: Router {
 
 extension StubRouter: Equatable {
     
-    public static func == (lhs: StubRouter, rhs: StubRouter) -> Bool {
+    public static func == (
+        lhs: StubRouter,
+        rhs: StubRouter) -> Bool {
         
         do {
             
