@@ -8,8 +8,6 @@
 
 // MARK: - PostAPIClient
 
-import Foundation
-
 extension APIClient: PostAPIClient {
     
     public func readPost(completion: @escaping (Result<Post>) -> Void) {
