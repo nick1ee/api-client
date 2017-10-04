@@ -17,24 +17,3 @@ public protocol Router {
     func makeURLRequest() throws -> URLRequest
     
 }
-
-// MARK: - Equatable (Default Implementation)
-
-extension Router {
-    
-    public static func == (lhs: Self, rhs: Self) -> Bool {
-        
-        do {
-            
-            let lhsRequest = try lhs.makeURLRequest()
-            
-            let rhsRquest = try rhs.makeURLRequest()
-            
-            return lhsRequest == rhsRquest
-            
-        }
-        catch { return false }
-        
-    }
-    
-}

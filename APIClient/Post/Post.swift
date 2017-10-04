@@ -18,6 +18,19 @@ public struct Post {
     
 }
 
+// MARK: - Equatable
+
+extension Post: Equatable {
+    
+    public static func == (lhs: Post, rhs: Post) -> Bool {
+        
+        return lhs.title == rhs.title
+            && lhs.body == rhs.body
+        
+    }
+    
+}
+
 // MARK: - Object
 
 public typealias Object = [String: Any]

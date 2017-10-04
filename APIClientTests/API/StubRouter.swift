@@ -12,7 +12,7 @@ import Foundation
 
 @testable import APIClient
 
-internal struct StubRouter: Router, Equatable {
+internal struct StubRouter: Router {
     
     // MARK: Router
     
@@ -21,6 +21,27 @@ internal struct StubRouter: Router, Equatable {
         let url = URL(string: "http://foo.com/api/bar")!
         
         return URLRequest(url: url)
+        
+    }
+    
+}
+
+// MARK: - Equatable
+
+extension StubRouter: Equatable {
+    
+    public static func == (lhs: StubRouter, rhs: StubRouter) -> Bool {
+        
+        do {
+            
+            let lhsRequest = try lhs.makeURLRequest()
+            
+            let rhsRquest = try rhs.makeURLRequest()
+            
+            return lhsRequest == rhsRquest
+            
+        }
+        catch { return false }
         
     }
     
