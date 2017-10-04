@@ -26,11 +26,9 @@ public protocol HTTPClient {
     
     // MARK: Request
     
-    typealias RequestCompletion = (_ result: Result<Value>) -> Void
-    
     func request(
         _ request: URLRequest,
-        completion: @escaping RequestCompletion
+        completion: @escaping (_ result: Result<Value>) -> Void
     )
     
 }
