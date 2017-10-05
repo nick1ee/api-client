@@ -46,7 +46,7 @@ public struct SimpleHTTPClient {
 
 extension SimpleHTTPClient: HTTPClient {
 
-    public typealias Value = Any?
+    public typealias Value = Any
 
     public func request(
         _ request: URLRequest,
