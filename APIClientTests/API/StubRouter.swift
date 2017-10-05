@@ -8,9 +8,8 @@
 
 // MARK: - StubRouter
 
+import APIClient
 import Foundation
-
-@testable import APIClient
 
 internal struct StubRouter: Router {
     

@@ -8,8 +8,8 @@
 
 // MARK: - StubHTTPClient
 
-import Foundation
 import APIClient
+import Foundation
 
 internal struct StubHTTPClient: HTTPClient {
     
