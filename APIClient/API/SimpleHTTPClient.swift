@@ -50,7 +50,7 @@ extension SimpleHTTPClient: HTTPClient {
 
     public func request(
         _ request: URLRequest,
-        completion: @escaping (Result<Value>) -> Void) {
+        completion: @escaping (HTTPResult<Value>) -> Void) {
 
         let task = session.dataTask(with: request) { data, response, error in
 

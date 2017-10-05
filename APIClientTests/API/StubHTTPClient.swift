@@ -15,7 +15,9 @@ internal struct StubHTTPClient: HTTPClient {
     
     typealias Value = Any
     
-    func request(_ request: URLRequest, completion: @escaping (Result<Value>) -> Void) {
+    func request(
+        _ request: URLRequest,
+        completion: @escaping (HTTPResult<Value>) -> Void) {
         
         let json: [String: Any] = [
             "title": "Hello",

@@ -10,6 +10,6 @@
 
 public protocol PostAPIClient {
     
-    func readPost(completion: @escaping (_ result: Result<Post>) -> Void)
+    func readPost(completion: @escaping (_ result: HTTPResult<Post>) -> Void)
     
 }

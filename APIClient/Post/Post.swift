@@ -33,22 +33,6 @@ extension Post: Equatable {
     
 }
 
-// MARK: - Object
-
-public typealias Object = [String: Any]
-
-// MARK: - JSONError
-
-public enum JSONError: Error {
-    
-    // MARK: Case
-    
-    case notObject
-    
-    case missingValue(forKey: String)
-    
-}
-
 // MARK: - JSON
 
 public extension Post {
@@ -68,7 +52,7 @@ public extension Post {
     public init(json: Any) throws {
         
         guard
-            let object = json as? Object
+            let object = json as? JSONObject
         else { throw JSONError.notObject }
         
         guard

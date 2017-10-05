@@ -10,7 +10,7 @@
 
 extension APIClient: PostAPIClient {
     
-    public func readPost(completion: @escaping (Result<Post>) -> Void) {
+    public func readPost(completion: @escaping (HTTPResult<Post>) -> Void) {
         
         do {
         

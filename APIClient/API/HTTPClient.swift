@@ -6,9 +6,9 @@
 //  Copyright © 2017 TinyWorld. All rights reserved.
 //
 
-// MARK: - Result
+// MARK: - HTTPResult
 
-public enum Result<Value> {
+public enum HTTPResult<Value> {
     
     case success(Value)
     
@@ -28,7 +28,7 @@ public protocol HTTPClient {
     
     func request(
         _ request: URLRequest,
-        completion: @escaping (_ result: Result<Value>) -> Void
+        completion: @escaping (_ result: HTTPResult<Value>) -> Void
     )
     
 }
