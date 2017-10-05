@@ -8,16 +8,12 @@
 
 // MARK: - APIClient
 
-import Foundation
-
-public struct APIClient<R: Router, C: HTTPClient> where
-    R: Equatable,
-    C: Equatable {
+public struct APIClient<HC: HTTPClient> {
     
     // MARK: Property
     
-    public let router: R
+    public let router: Router
     
-    public let httpClient: C
+    public let httpClient: HC
     
 }

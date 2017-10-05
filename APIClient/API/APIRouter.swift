@@ -16,26 +16,6 @@ public enum APIRouter {
     
 }
 
-// MARK: - Equatable
-
-extension APIRouter: Equatable {
-    
-    public static func == (
-        lhs: APIRouter,
-        rhs: APIRouter) -> Bool {
-        
-        switch (lhs, rhs) {
-            
-        case (.readPost(let lhsId), .readPost(let rhsId)):
-            
-            return lhsId == rhsId
-            
-        }
-        
-    }
-    
-}
-
 // MARK: - Router
 
 import Foundation

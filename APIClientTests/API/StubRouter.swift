@@ -25,26 +25,3 @@ internal struct StubRouter: Router {
     }
     
 }
-
-// MARK: - Equatable
-
-extension StubRouter: Equatable {
-    
-    public static func == (
-        lhs: StubRouter,
-        rhs: StubRouter) -> Bool {
-        
-        do {
-            
-            let lhsRequest = try lhs.makeURLRequest()
-            
-            let rhsRquest = try rhs.makeURLRequest()
-            
-            return lhsRequest == rhsRquest
-            
-        }
-        catch { return false }
-        
-    }
-    
-}

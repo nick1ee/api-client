@@ -29,17 +29,3 @@ internal struct StubHTTPClient: HTTPClient {
     }
     
 }
-
-// MARK: - Equatable
-
-extension StubHTTPClient: Equatable {
-    
-    public static func == (
-        lhs: StubHTTPClient,
-        rhs: StubHTTPClient) -> Bool {
-        
-        return true
-        
-    }
-    
-}
