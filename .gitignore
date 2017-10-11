@@ -1,4 +1,5 @@
-# Created by https://www.gitignore.io/api/xcode,macos,swift,vapor
+
+# Created by https://www.gitignore.io/api/macos,swift,xcode
 
 ### macOS ###
 *.DS_Store
@@ -85,17 +86,6 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-### Swift.SwiftPackageManager Stack ###
-Packages
-.build
-xcuserdata
-*.xcodeproj
-
-### Vapor ###
-Config/secrets
-
-### Vapor Patch ###
-
 ### Xcode ###
 # Xcode
 #
@@ -114,4 +104,4 @@ Config/secrets
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-# End of https://www.gitignore.io/api/xcode,macos,swift,vapor
+# End of https://www.gitignore.io/api/macos,swift,xcode
