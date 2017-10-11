@@ -11,11 +11,11 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+public final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Property
     
-    var window: UIWindow?
+    public final var window: UIWindow?
 
 }
 

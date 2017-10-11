@@ -22,9 +22,10 @@ public struct Post {
 
 extension Post: Equatable {
     
-    public static func == (
+    public static func ==(
         lhs: Post,
-        rhs: Post) -> Bool {
+        rhs: Post
+    ) -> Bool {
         
         return lhs.title == rhs.title
             && lhs.body == rhs.body
@@ -63,7 +64,7 @@ public extension Post {
         
         guard
             let body = object[Schema.body] as? String
-            else { throw JSONError.missingValue(forKey: Schema.body) }
+        else { throw JSONError.missingValue(forKey: Schema.body) }
         
         self.body = body
         
